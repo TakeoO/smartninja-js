@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="base.js" async></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-green-600 h-screen font-sans">
+    <div class="shadow-xl w-4/12 p-5 bg-gray-200 m-4 content-around container mx-auto justify-center items-center">
+        <div class="flex">
+            <h1 class="text block mx-auto flex text-5xl">00:00:00:00</h1>
+        </div>
+        <div class="flex">
+            <button id="start-button" class="text-white bg-green-600 inline-block p-3 flex-1 m-2">
+                Start timer
+            </button>
+            <button id="pause-button" class="text-white bg-blue-600 inline-block  p-3 flex-1 m-2">
+                Pause
+            </button>
+            <button id="loop-button" class="text-white bg-yellow-600 inline-block  p-3 flex-1 m-2">
+                Loop
+            </button>
+        </div>
+        <div class="flex">
+            <button id="reset-button" class="text-white bg-red-600 inline-block p-3 flex-1 m-2">
+                Reset timer
+            </button>
+        </div>
+        <div id="loops-container" class="p-2">
+        <h4 class="text-xl text-grey-600 mb-0">Loops:</h4>
+            <ul id="loops" class="list-none sm:list-disc md:list-decimal lg:list-disc xl:list-none"></ul>
+        </div>
+    </div>
+</body>
+
+</html>
