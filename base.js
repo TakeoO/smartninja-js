@@ -1,7 +1,8 @@
 (() => {
     var interval = null;
     var i = hours = minutes = seconds = 0;
-    var loops = [];
+    var storage = new TimerStorage();
+    var loops = storage.get('loops') || [];
     /**
      *  Start button for timer
      */
@@ -38,12 +39,16 @@
      * Pushes loop data into loop array and shows new line of loop
      */
     document.getElementById("loop-button").addEventListener("click", function (event) {
+
+
         loops.push({
             'hours': hours,
             'minutes': minutes,
             'seconds': seconds,
             'miliseconds': i,
         });
+
+        storage.set('loops', loops);
         loopsAppendText(
             loops.slice(-1)
         )
@@ -94,7 +99,7 @@
         let loopList = document.getElementById('loops');
         let currentContent = loopList.innerHTML;
 
-        if(loops.length > 0){
+        if (loops.length > 0) {
             document.getElementById
         }
 
